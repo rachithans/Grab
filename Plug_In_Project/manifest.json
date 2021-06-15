@@ -2,5 +2,13 @@
     "name": "plugin project",
     "version": "1.0",
     "description": "Build a video downloader",
-    "manifest_version": 2
+    "manifest_version": 2,
+
+    "permissions": [
+        "downloads",
+        "<all_urls>"
+      ],
+    "browser_action": {
+        "default_popup": "popup.html"
+      }
   }

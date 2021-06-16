@@ -4,7 +4,7 @@ var videoType = ["flv", "avi", "mkv", "mov", "mp4", "mpeg", "mpg","mts",
 //convert webpage html to single string
 var htmlText = document.body.innerHTML.toString();
 
-var videoRegex = videoType.join('|');
+var videoRegex = videoType.join("|");
 
 // pattern to match urls that point to videos
 //code adapted from  https://github.com/dimofte/chrome-video-downloader/blob/master/scrape_video_urls.js
@@ -14,13 +14,16 @@ var urlRegex = new RegExp('("|\')(http|https):\\/\\/[^("|\'|,)]*?\\.(' + videoRe
 var urls = htmlText.match(urlRegex);
 
 // remove quotes from the matched URLS
-var fileRegex = new RegExp('[^\/]+?\.(' + videoRegex + ')', 'i');
-
-//map the URLs to the array.
+var fileRegex = new RegExp(
+  '[^\/]+?\.(' + videoExtensionsAsRegex + ')',
+  'i');
+//map the URLs and names to the array.
 var vidData = videoUrls.map(function(url) {
+  
   return {
-    name: url.match(fileRegex)
+    name: url.match(fileRegex)[0],
+    url: url
   }
 });
-//send data
+
 chrome.extension.sendRequest(vidData);

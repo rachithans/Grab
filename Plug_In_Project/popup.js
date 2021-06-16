@@ -4,6 +4,7 @@ var links = [];
 function showLinks() {
 
   for (var i = 0; i < links.length; i++) {
+    //create download image and download functionality
     var download = document.createElement("img");
     download.title = "Download this video";
     download.setAttribute("url", links[i].url);
@@ -13,6 +14,7 @@ function showLinks() {
       });
     };
     //create collumns for name and download links
+    
     var colDownload = document.createElement("td");
     colDownload.appendChild(download);
 

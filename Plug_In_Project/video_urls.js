@@ -14,16 +14,10 @@ var urlRegex = new RegExp('("|\')(http|https):\\/\\/[^("|\'|,)]*?\\.(' + videoRe
 var urls = htmlText.match(urlRegex);
 
 // remove quotes from the matched URLS
-var fileRegex = new RegExp(
-  '[^\/]+?\.(' + videoExtensionsAsRegex + ')',
-  'i');
-//map the URLs and names to the array.
-var vidData = videoUrls.map(function(url) {
-  
-  return {
-    name: url.match(fileRegex)[0],
-    url: url
-  }
+var fileRegex = new RegExp('[^\/]+?\.(' + videoRegex + ")", "i");
+//map the URLs to the array.
+var vidData = urls.map(function(url) {
+  return {name: url.match(fileRegex)}
 });
-
+//send data
 chrome.extension.sendRequest(vidData);

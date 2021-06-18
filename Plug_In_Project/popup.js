@@ -9,9 +9,11 @@ function showLinks() {
     download.title = "Download this video";
     download.setAttribute("url", links[i].url);
     download.onclick = function(event) {
+      
       chrome.downloads.download({
         url: event.target.getAttribute("url"),
       });
+      
     };
     //create collumns for name and download links
     
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     checkPageButton.addEventListener("click", function() {
         chrome.extension.onRequest.addListener(function(vidData){
             for (var i in vidData) {
-              links.push(vidData[i]);
+                links.push(vidData[i]);
             }
             showLinks();
         });

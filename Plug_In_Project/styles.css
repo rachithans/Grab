@@ -5,9 +5,12 @@ body{
 h1, table, div{
     width: 100%;
     margin-bottom: 20px;
-    float: left;
+    text-align: center;
 }
-
+p{
+    text-align: center;
+    font-weight: bold;
+}
 #helpDiv {
     height:35px;
     line-height: 35px;
@@ -32,4 +35,11 @@ td {
 
 .download:hover {
     color: gray;
+}
+
+#buttonDiv1{
+    text-align: center;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 40px;
 }

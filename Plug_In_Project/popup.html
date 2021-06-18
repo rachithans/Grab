@@ -3,24 +3,25 @@
   <head>
     <title>Videos for Download</title>
     <link rel="stylesheet" href="styles.css">
-    <!--Semantic UI libraries-->
+    <!--Semantic UI libraries--> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css"/>
     <script src="popup.js"></script>
   </head>
   <body>
-    <h1>Video Downloader</h1>
+    <h1 class="ui header"> Video Downloader </h1>    
     <table id="links"></table>
+    
     <div id="buttonDiv1">
       <!--<button id="checkPage">Check this page now!</button>-->
-      <button class="ui black button" id="checkPage">Download video</button>
+      <button class="ui black button" id="checkPage">Available Links  </button>
+      <a href="history.html"><button class="ui black button" id="history">History</button></a>
     </div>
-    <div id="buttonDiv2">
-      <a href="history.html"><button id="history">History</button></a>
-    </div>
+
     <div id="helpDiv">
       <!--icon retrieved from https://icons8.com/icons/set/help-->
       <img src="icons8-help-32.png">
-      <a href="help.html">help</a>
+      <a class="ui black button" href="help.html">help</a>
     </div>
+
   </body>
 </html>

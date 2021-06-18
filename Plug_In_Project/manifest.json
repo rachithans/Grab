@@ -6,9 +6,11 @@
 
     "permissions": [
         "<all_urls>",
-        "downloads"
+        "downloads",
+        "storage"
       ],
     "browser_action": {
+      "default_icon": "icon.png",
         "default_popup": "popup.html"
       }
   }

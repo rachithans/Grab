@@ -13,15 +13,15 @@ var urlRegex  = new RegExp('("|\')(http|https):\\/\\/[^("|\'|,)]*?\\.(' +videoRe
 
 // Build the array of video urls
 var urls = htmlText.match(urlRegex);
+
 // remove quotes from strings
 urls = urls.map(function(quotes) {
       return quotes.substr(1, quotes.length-2)
     });
-  
 var fileRegex = new RegExp('[^\/]+?\.(' + videoRegex + ')');
-    
+
+ //map the URLs and names to the array.
 var vidData = urls.map(function(url) {
-  
   return {
     name: url.match(fileRegex)[0],
     url: url

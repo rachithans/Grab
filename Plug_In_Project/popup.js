@@ -16,6 +16,7 @@ function showLinks() {
     //create collumns for name and download links
     
     var colDownload = document.createElement("td");
+    colDownload.className += "download"
     colDownload.appendChild(download);
 
     var colName = document.createElement("td");

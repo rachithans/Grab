@@ -1,0 +1,35 @@
+body{
+    width: 300px;
+}
+
+h1, table, div{
+    width: 100%;
+    margin-bottom: 20px;
+    float: left;
+}
+
+#helpDiv {
+    height:35px;
+    line-height: 35px;
+    clear: both;
+}
+
+a {
+    float: left;
+}
+img {
+    float: left;
+}
+
+td {
+    border-bottom: 0.5px dashed;
+    padding: 5px;
+}
+
+.download {
+    cursor: pointer;
+}
+
+.download:hover {
+    color: gray;
+}

@@ -1,7 +1,10 @@
-body{
-    width: 300px;
-}
 
+body, html {
+    height: 50%;
+}
+#header {
+    margin-top: 20px;
+}
 h1, table, div{
     width: 100%;
     margin-bottom: 20px;
@@ -15,6 +18,7 @@ p{
     height:35px;
     line-height: 35px;
     clear: both;
+    padding-left: 6px;
 }
 
 a {
@@ -41,5 +45,6 @@ td {
     text-align: center;
     display: inline-block;
     margin-top: 50px;
-    margin-left: 40px;
+    margin-left: 10px;
 }
+

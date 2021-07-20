@@ -1,5 +1,16 @@
 var links = [];
 
+function add_Records(url){
+    chrome.runtime.sendMessage({
+        message: 'insert',
+        payload: [{
+            "url": url
+
+        }]
+    });
+
+}
+
 //function to display links in the chrome ext window
 function showLinks() {
 
@@ -13,7 +24,9 @@ function showLinks() {
       chrome.downloads.download({
         url: event.target.getAttribute("url"),
       });
-      
+      console.log(event.target.getAttribute("url"));
+      add_Records(event.target.getAttribute("url"))
+
     };
     //create collumns for name and download links
     
@@ -36,7 +49,9 @@ function showLinks() {
 
 // display videos upon clicking button
 document.addEventListener("DOMContentLoaded", function() {
-    var checkPageButton = document.getElementById("checkPage");
+    console.log("hiiiiiiiiiii");
+        var checkPageButton = document.getElementById("checkPage");
+    if(checkPageButton){
     checkPageButton.addEventListener("click", function() {
         chrome.extension.onRequest.addListener(function(vidData){
             for (var i in vidData) {
@@ -50,5 +65,20 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
+}
+
+    var hist = document.getElementById("history");
+if(hist){
+    hist.addEventListener("click",function(){
+    console.log('history button clicked')
+    chrome.runtime.sendMessage({
+        message: 'get_records'
+        });
+    });
+}
 })
+
+//
+
+
 

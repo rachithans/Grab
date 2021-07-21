@@ -45,7 +45,11 @@ td {
     text-align: center;
     display: inline-block;
     margin-top: 50px;
-    margin-left: 10px;
-    
+    margin-left:5px;   
 }
-
+#buttonDiv2{
+    text-align: center;
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 4px;   
+}

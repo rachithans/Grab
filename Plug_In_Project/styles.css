@@ -39,11 +39,38 @@ td {
     text-align: center;
     display: inline-block;
     margin-top: 50px;
-    margin-left:5px;   
+    margin-left: 10px;
+    
 }
-#buttonDiv2{
+
+.buttonLink{
+    width:45%;
+}
+
+.button{
+    width:100%;
+}
+
+#availableLinks{
+    margin-right: 5px;
+}
+
+#historyButton {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+#helpButton {
+    margin-top: 5px;
+}
+
+.back{
     text-align: center;
     display: inline-block;
-    margin-top: 0px;
-    margin-left: 4px;   
+    padding:10px;
+}
+
+p{
+    text-align: left;
+    padding:10px;
 }

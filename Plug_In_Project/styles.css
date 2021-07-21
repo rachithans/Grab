@@ -14,12 +14,6 @@ p{
     text-align: center;
     font-weight: bold;
 }
-#helpDiv {
-    height:35px;
-    line-height: 35px;
-    clear: both;
-    padding-left: 6px;
-}
 
 a {
     float: left;
@@ -38,7 +32,7 @@ td {
 }
 
 .download:hover {
-    color: gray;
+    opacity: 0.5;
 }
 
 #buttonDiv1{

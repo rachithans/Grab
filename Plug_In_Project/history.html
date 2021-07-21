@@ -3,20 +3,29 @@
   <head>
     <title>Videos for Download</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css"/>
     <script src="popup.js"></script>
+    <style>
+      img {
+        opacity: 0.5;        
+        width: 100%;
+      }
+      body{
+        height: 50%;
+      }
+      </style>
   </head>
   <body>
-    <h1>History</h1>
-    <div>
-        <a href="popup.html">&lt back</a>
-    </div>
+    <h1 id="header">History</h1>
 
     <div >
       <table id="urls">
         
       </table>
     </div>
-
+    <div class="back">
+      <a href="popup.html"><button class="ui black button">&lt back</button></a>
+    </div>
     <script src="history.js"></script>
   </body>
 </html>

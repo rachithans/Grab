@@ -17,6 +17,8 @@ function showLinks() {
         var download = document.createElement("img");
         download.title = "Download this video";
         download.src = 'download.png';
+        download.style.height = "35px";
+        download.style.width = "35px";
         download.setAttribute("url", links[i].url);
         download.onclick = function(event) {
             chrome.downloads.download({

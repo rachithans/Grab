@@ -42,6 +42,7 @@ function showLinks() {
         var linksDisplay = document.getElementById("links");
         linksDisplay.appendChild(rows);
     }
+    
 }
 
 //function used by the download all button
@@ -62,12 +63,14 @@ function downloadAll(){
 
 // display videos upon clicking button
 document.addEventListener("DOMContentLoaded", function() {
+    var av = 0;
     var checkPageButton = document.getElementById("checkPage");
     if(checkPageButton){
         checkPageButton.addEventListener("click", function() {
             chrome.extension.onRequest.addListener(function(vidData){
                 for (var i in vidData) {
                     links.push(vidData[i]);
+                    av = 1;
                 }
                 showLinks();
             });
@@ -76,6 +79,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     chrome.tabs.executeScript(activeTabs[0].id, {file: "video_urls.js"});
                 });
             });
+            if (av==0){
+                alert("no link");
+            }
         });
     }
     var hist = document.getElementById("history");
@@ -99,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     links.push(vidData[i]);
                 }
                 downloadAll();
+                alert("start download");
             });
             chrome.windows.getCurrent(function (currentWindow) {
                 chrome.tabs.query({active: true, windowId: currentWindow.id}, function(activeTabs) {

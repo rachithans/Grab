@@ -1,5 +1,5 @@
 var videoType = ["flv", "avi", "mkv", "mov", "mp4", "mpeg", "mpg","mts",
-  "mxf", "ogv", "vep", "vob", "webm", "wlmp", "wmv", "rm", "swf"];
+  "mxf", "ogv", "vep", "vob", "webm", "wlmp", "wmv", "rm", "swf","jpg","png","jpeg","gif"];
 
 //convert webpage html to single string
 var htmlText = document.body.innerHTML.toString();
